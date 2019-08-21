@@ -3,11 +3,12 @@
  */
 
 import React from 'react'
+import DailyWorkout from './DailyWorkout'
 
 class WorkoutList extends React.Component {
   render() {
     return (
-      <div>Workout List</div>
+      <div><DailyWorkout /></div>
     )
   }
 }

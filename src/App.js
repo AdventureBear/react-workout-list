@@ -1,9 +1,10 @@
 import React from 'react'
+import WorkoutList from './components/WorkoutList'
 
 class App extends React.Component {
   render() {
     return (
-      <div>This is the App</div>
+      <div><WorkoutList /></div>
     )
   }
 }
