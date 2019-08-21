@@ -2,15 +2,29 @@
  * Created by suzanne on 8/20/19.
  */
 import React from 'react'
+import PropTypes from 'prop-types'
 
-// class Header extends React.Component {
-//   render() {
-//     return (
-//       <div>Workout List</div>
-//     )
-//   }
-// }
+class Header extends React.Component {
+  render() {
+    return (
+      <div>
+        Workout List for {" "}
+        <span>
+          {this.props.athlete}
+        </span>
+      </div>
+    )
+  }
+}
 
-const Header = () => <div>Workout List</div>
+// const Header = () => <div>
+//   Workout List for
+// <span>
+//   {this.props.athlete}
+// </span>
+// </div>
 
+Header.propTypes ={
+  athlete: PropTypes.string
+}
 export default Header
