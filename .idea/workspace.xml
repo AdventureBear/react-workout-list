@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f61a6489-6bc4-40ae-95c2-15223f641a91" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/css/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/bike.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/dumbell.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/food.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/jumprope.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/rest.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/run.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/stretch.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/swim.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/DailyWorkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DailyWorkout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/WorkoutList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WorkoutList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +81,7 @@
       <updated>1566355364541</updated>
       <workItem from="1566355365916" duration="734000" />
       <workItem from="1566356444552" duration="27000" />
-      <workItem from="1566356485917" duration="4177000" />
+      <workItem from="1566356485917" duration="6357000" />
     </task>
     <servers />
   </component>
