@@ -7,12 +7,12 @@ import PropTypes from 'prop-types'
 class Header extends React.Component {
   render() {
     return (
-      <div>
+      <header className="component-header">
         Workout List for {" "}
         <span>
           {this.props.athlete}
         </span>
-      </div>
+      </header>
     )
   }
 }

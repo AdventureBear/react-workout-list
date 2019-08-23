@@ -4,6 +4,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'; // ES6
 
+import runImg from '../img/run.png'
+import bikeImg from '../img/bike.png'
+import swimImg from '../img/swim.png'
 
 class DailyWorkout extends React.Component {
   handleClick = () => {
@@ -11,11 +14,13 @@ class DailyWorkout extends React.Component {
   }
 
   render() {
+    let iconObj =
+      {"run": runImg, "bike": bikeImg, "swim": swimImg}
     return (
       <div  onClick={this.handleClick}>
         <img
         alt={this.props.mode}
-        src={this.props.icon}
+        src={iconObj[this.props.mode]}
         width={this.props.size}/>
       <span>
             {this.props.mode}
@@ -33,7 +38,6 @@ class DailyWorkout extends React.Component {
 }
 DailyWorkout.propTypes = {
   mode: PropTypes.string,
-  icon: PropTypes.string,
   distance: PropTypes.number,
   units: PropTypes.string,
   size: PropTypes.string,
@@ -41,3 +45,4 @@ DailyWorkout.propTypes = {
 }
 
 export default DailyWorkout
+

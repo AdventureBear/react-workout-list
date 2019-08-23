@@ -1,0 +1,19 @@
+[
+   {
+     "mode": "run",
+    "size": "24px",
+    "distance": 3,
+    "units": "miles"
+  }, {
+    "mode": "bike",
+    "size": "24px",
+    "distance": 24,
+    "units": "miles"
+  },
+  {
+    "mode": "swim",
+    "size": "24px",
+    "distance": 3000,
+    "units": "meters"
+  }
+  ]
