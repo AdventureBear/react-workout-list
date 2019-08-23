@@ -3,6 +3,8 @@
  */
 import React from 'react'
 import PropTypes from 'prop-types'; // ES6
+import '../css/DailyWorkouts.css'
+import moment from 'moment';
 
 import runImg from '../img/run.png'
 import bikeImg from '../img/bike.png'
@@ -16,31 +18,41 @@ class DailyWorkout extends React.Component {
   render() {
     let iconObj =
       {"run": runImg, "bike": bikeImg, "swim": swimImg}
+
     return (
-      <div  onClick={this.handleClick}>
-        <img
-        alt={this.props.mode}
-        src={iconObj[this.props.mode]}
-        width={this.props.size}/>
-      <span>
-            {this.props.mode}
-      </span>
-        {" "}
-        <span>
-            {this.props.distance}{" "}
-      </span>
-        <span>
-            {this.props.units}
-      </span>
+      <div
+        className="component-daily-workouts"
+        onClick={this.handleClick}>
+        <div className="workout-card">
+          <div className='workoutIcon'>
+            <img
+              alt={this.props.mode}
+              src={iconObj[this.props.mode]}
+              width={this.props.size}/>
+          </div>
+          <div className='shortInfo'>
+            <span>
+              { moment(this.props.date).format('ddd MMM Do')}
+            </span>
+            <br></br>
+
+          <span>
+                {this.props.mode}
+          </span>
+            {" "}
+            <span>
+                {this.props.distance}{" "}
+          </span>
+            <span>
+                {this.props.units}
+          </span>
+          </div>
+      </div>
       </div>
     )
   }
 }
 DailyWorkout.propTypes = {
-  mode: PropTypes.string,
-  distance: PropTypes.number,
-  units: PropTypes.string,
-  size: PropTypes.string,
   dailyData: PropTypes.array
 }
 

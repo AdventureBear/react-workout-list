@@ -6,10 +6,12 @@ import React from 'react'
 import PropTypes from 'prop-types'; // ES6
 import DailyWorkout from './DailyWorkout'
 
+import '../css/WorkoutList.css'
+
 class WorkoutList extends React.Component {
   render() {
     return (
-      <div>{
+      <div className="component-workout-list">{
         this.props.dailyData.map((dailyData,i) => {
           return (
             <DailyWorkout
@@ -18,6 +20,7 @@ class WorkoutList extends React.Component {
               size={dailyData.size}
               distance={dailyData.distance}
               units={dailyData.units}
+              date={dailyData.date}
             />
           )
         })

@@ -3,6 +3,8 @@
  */
 import React from 'react'
 import PropTypes from 'prop-types'
+import '../css/Header.css'
+
 
 class Header extends React.Component {
   render() {
