@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f61a6489-6bc4-40ae-95c2-15223f641a91" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/SVGRunIcon.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/DailyWorkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DailyWorkout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WorkoutList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WorkoutList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/DailyWorkouts.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/DailyWorkouts.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dailyWorkouts.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/dailyWorkouts.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -85,7 +82,7 @@
       <updated>1566355364541</updated>
       <workItem from="1566355365916" duration="734000" />
       <workItem from="1566356444552" duration="27000" />
-      <workItem from="1566356485917" duration="16313000" />
+      <workItem from="1566356485917" duration="25105000" />
     </task>
     <servers />
   </component>
