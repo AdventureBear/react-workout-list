@@ -24,25 +24,53 @@ class DailyWorkout extends React.Component {
     //   {"run": runImg, "bike": bikeImg, "swim": swimImg}
     return (
       <div
-        className="component-daily-workouts"
+        className="col-xs-6 col-xs-offset-3  component-daily-workouts"
         onClick={this.handleClick}>
-        <div className="workout-card">
-            <Icon
-              mode={this.props.mode}
-            />
-          {console.log(this.props.mode)}
-            {/*<img*/}
-            {/*  alt={this.props.mode}*/}
-            {/*  src={iconObj[this.props.mode]}*/}
-            {/*  width={this.props.size}/>*/}
-         <Data
-           mode={this.props.mode}
-           size={this.props.size}
-           distance={this.props.distance}
-           units={this.props.units}
-           date={this.props.date}
-         />
+        <div className="card shadow-sm mb-3 d-inline-block" >
+          <div className="card-header">
+            { moment(this.props.date).format('ddd MMM Do')}
+          </div>
+          <div className="card-body text-black bg-light">
+            <h4 className="card-title">{this.props.mode}</h4>
+            <div className="workout">
+              <Icon className="icon"
+                    mode={this.props.mode}
+              />                         {/* Inline child 1 */}
+              <Data className="data"
+                    mode={this.props.mode}
+                    size={this.props.size}
+                    distance={this.props.distance}
+                    units={this.props.units}
+                    date={this.props.date}
+              />                          { /* Inline Child 2 */}
+              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
+            </div>
+          </div>
         </div>
+
+        {/*<div className="card workout-card">{ /* Parent *!/*/}
+        {/*<div className="card-body">*/}
+        {/*    <div className="card-title">*/}
+        {/*      <h5>{ moment(this.props.date).format('ddd MMM Do')}</h5>*/}
+        {/*    </div>*/}
+        {/*    <div className="card-subtitle">*/}
+        {/*    {this.props.mode}*/}
+        {/*    </div>*/}
+        {/*    <div className="workout">*/}
+        {/*      <Icon className="icon"*/}
+        {/*            mode={this.props.mode}*/}
+        {/*          />                         /!* Inline child 1 *!/*/}
+        {/*       <Data className="data"*/}
+        {/*         mode={this.props.mode}*/}
+        {/*         size={this.props.size}*/}
+        {/*         distance={this.props.distance}*/}
+        {/*         units={this.props.units}*/}
+        {/*         date={this.props.date}*/}
+        {/*       />                          { /* Inline Child 2 *!/*/}
+        {/*    </div>*/}
+        {/*   </div>*/}
+        {/*  </div>*/}
       </div>
     )
   }
@@ -50,23 +78,23 @@ class DailyWorkout extends React.Component {
 
 
 class Icon extends React.Component {
-  renderSwim (){
+  renderBike (){
     return (
-      <div className='workoutIcon'>
+      <div className='workoutIcon inline-block-child'>
     < BikeSVG
       alt={this.props.mode}
-      width={24}
+      width={30}
       fill="#49c" />
       </div>
     )
   }
-  renderBike (){
+  renderSwim (){
     return (
-      <div className='workoutIcon'>
+      <div className='workoutIcon inline-block-child'>
         <SwimSVG
 
           alt={this.props.mode}
-          width={24}
+          width={30}
           fill="blue" />
       </div>
     )
@@ -74,22 +102,21 @@ class Icon extends React.Component {
 
   renderRun (){
     return(
-      <div className='workoutIcon'>
-        <RunSVG
-
+      <div className='workoutIcon inline-block-child'>
+        <RunSVG className={"run-icon"}
           alt={this.props.mode}
-          width={24}
+          width={30}
           fill="#49c" />
       </div>
     )
   }
 
     render () {
-      if (this.props.mode==="run") {
+      if (this.props.mode==="Running") {
         return this.renderRun()
-      } else if (this.props.mode==="swim") {
+      } else if (this.props.mode==="Lap Swimming") {
         return this.renderSwim()
-      } else {
+      } else if (this.props.mode==="Cycling"){
         return this.renderBike()
       }
     }
@@ -98,22 +125,9 @@ class Icon extends React.Component {
 class Data extends React.Component {
   render () {
     return (
-      <div className='shortInfo'>
-            <span>
-              { moment(this.props.date).format('ddd MMM Do')}
-              {console.log(this.props.date)}
-            </span>
+      <div className='shortInfo inline-block-child'>
         {" "}
-        <span>
-                {this.props.mode}
-          </span>
-        {" "}
-        <span>
-                {this.props.distance}{" "}
-          </span>
-        <span>
-                {this.props.units}
-          </span>
+          <span  className="distance"><b>{this.props.distance}</b></span>{" "}{this.props.units}
       </div>
     )
   }
