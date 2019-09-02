@@ -1,7 +1,7 @@
 import React from 'react'
-import WorkoutList from './components/WorkoutList'
+import WorkoutListView from './components/WorkoutListView'
 import Header from './components/Header'
-
+import './css/App.css'
 import dailyWorkouts from './dailyWorkouts'
 
 class App extends React.Component {
@@ -17,17 +17,17 @@ class App extends React.Component {
   render() {
     return (
       <div>
-      <div className="jumbotron">
+      <div>
         <Header
           athlete={this.state.athlete}
         />
       </div>
-        <div class="container">
-          <WorkoutList
+        <div className="container">
+          <WorkoutListView
             dailyData={this.state.dailyWorkouts}
           />
         </div>
-        <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0"  rel="noopener noreferrer" target="_blank">CC 3.0 BY</a></div>
+        <div className="">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0"  rel="noopener noreferrer" target="_blank">CC 3.0 BY</a></div>
       </div>
     )
   }

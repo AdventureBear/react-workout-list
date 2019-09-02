@@ -1,22 +1,73 @@
 [
    {
      "date": "Thu Aug 21 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
-     "mode": "Running",
-    "size": "24px",
-    "distance": 3,
-    "units": "miles"
-  }, {
-  "date": "Wed Aug 22 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
-  "mode": "Cycling",
-    "size": "24px",
-    "distance": 24,
-    "units": "miles"
-  },
+     "sessions":
+      [
+        {
+         "mode": "Running",
+         "size": "24px",
+         "distance": 3,
+         "units": "miles",
+         "code": "E1",
+         "codeDesc": "Steady Endurance",
+         "descriptionShort": "Endurance run with steady efforts throughout.  Breathing non-labored, you should be able to sing or have a conversation without gasping for air",
+          "descriptionLong": "Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters.\n\n            Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to.\n"
+
+        },
+        {
+          "mode": "Cycling",
+          "size": "24px",
+          "distance": 24,
+          "units": "miles",
+          "code": "ES",
+          "codeDesc": "Endurance with Sprints",
+          "descriptionShort": "Endurance cycling with sprints.  Mostly converational riding.  Include sprints from 5 to 30 seconds as directed by your coach with at least 5 minutes recovery inbetween",
+          "descriptionLong": "Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters.\n\n            Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to.\n"
+
+        }
+      ]
+    }, {
+
+      "date": "Fri Aug 22 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+      "sessions":
+      [
+        {
+          "mode": "Cycling",
+          "size": "24px",
+          "distance": 24,
+          "units": "miles",
+          "code": "ES",
+          "codeDesc": "Endurance with Sprints",
+          "descriptionShort": "Endurance cycling with sprints.  Mostly conversational riding.  Include sprints from 5 to 30 seconds as directed by your coach with at least 5 minutes recovery inbetween",
+          "descriptionLong": "Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters.\n\n            Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to.\n"
+
+        },{
+          "mode": "Lap Swimming",
+          "size": "24px",
+          "distance": 3000,
+          "units": "meters",
+          "code": "TE",
+          "codeDesc": "Technique with Endurance",
+          "descriptionShort": "Technique with Endurance Repeats. Endurance based technique work as specified by your coach. Implement progressively longer volumes of endurance based swimming in these sets.  ",
+        "descriptionLong": "Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters.\n\n            Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to.\n"
+
+      }
+      ]
+    },
   {
-    "date": "Fri Aug 23 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
-    "mode": "Lap Swimming",
-    "size": "24px",
-    "distance": 3000,
-    "units": "meters"
+    "date": "Sat Aug 23 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+    "sessions":
+            [
+        {
+          "mode": "Cycling",
+          "size": "24px",
+          "distance": 24,
+          "units": "miles",
+          "code": "ES",
+          "codeDesc": "Endurance with Sprints",
+          "descriptionShort": "Endurance cycling with sprints.  Mostly conversational riding.  Include sprints from 5 to 30 seconds as directed by your coach with at least 5 minutes recovery inbetween",
+          "descriptionLong": "Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters.\n\n            Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to.\n"
+        }
+              ]
   }
-  ]
+]

@@ -9,11 +9,12 @@ import '../css/Header.css'
 class Header extends React.Component {
   render() {
     return (
-      <header className="component-header h3">
+      <header className="component-header">
         Workout List for {" "}
-        <span>
+        <div className="athlete">
           {this.props.athlete}
-        </span>
+        </div>
+        <span className="current-year">2019</span>
       </header>
     )
   }

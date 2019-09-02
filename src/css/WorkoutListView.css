@@ -1,0 +1,35 @@
+.component-workout-list {
+    margin: 0 auto;
+    min-height: auto;
+    width: 400px;
+}
+
+.component-workout-list .daily-card {
+    /*border: 1px cornflowerblue solid;*/
+    /*border-radius: 4px;*/
+    /*overflow: hidden;*/
+    display: flex;
+    flex-direction: column;
+    /*box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);*/
+    margin: 20px 0;
+}
+
+
+.component-workout-list .daily-header {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 8px 16px 16px 16px;
+    color: #fff;
+    background: cornflowerblue;
+    text-align: center;
+    border-radius: 4px;
+    display: flex;
+    align-content: center;
+
+}
+.date {
+text-align: center;
+}
+.push {
+    margin-left: auto;
+}
