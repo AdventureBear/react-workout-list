@@ -3,57 +3,116 @@
  */
 import React from 'react'
 import PropTypes from 'prop-types'; // ES6
+import ToggleDisplay from 'react-toggle-display'
 import '../css/DailyWorkouts.css'
 
 import {RunSVG, BikeSVG, SwimSVG} from "./SVGRunIcon";
 
 
 class DailyWorkouts extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state={
+      show: true
+    }
+  }
 
   handleClick = () => {
     console.log('Show workout details');
   }
 
-  render () {
-    return(
-    this.props.sessions.map ((workout,j)=> {
+  showWorkout = () => {
+    this.setState({
+      show: !this.state.show
+    })
+    console.log("toggled show")
+  }
 
-      return(
-        <div key={j} className="component-daily-workouts workout-main">
+  renderShow () {
+    return(
+    // this.props.sessions.map ((workout,j)=> {
+    //   return(
+        <div key={this.props.key} className="component-daily-workouts workout-main">
             <div className="workout-mode-header">
               <div className="mode-toggle">
                 <div className="workout-mode">
-                  {workout.mode }
+                  {this.props.workout.mode }
                 </div>
-                <div className="toggle-workout push">
+                <div className="toggle-workout push pointer"
+                     onClick = {this.showWorkout}
+                       >
                   <i className="material-icons">keyboard_arrow_up</i>
                 </div>
               </div>
                 <div className="workout-mode-details">
                     <div className="workout-icon">
                       <Icon
-                            mode={workout.mode}
+                            mode={this.props.workout.mode}
                       />
                     </div>
 
                     <div className="workout-distance push">
-                      <b>{workout.distance}</b>{" "}{workout.units}
+                      <b>{this.props.workout.distance}</b>{" "}{this.props.workout.units}
                     </div>
                </div>
             </div>
 
             <div className="workout-short">
-              <strong>{workout.code}: </strong>{this.props.codeDesc}
-                {workout.descriptionShort}
+              <strong>{this.props.workout.code}: </strong>{this.props.codeDesc}
+                {this.props.workout.descriptionShort}
             </div>
             <div className="workout-long">
-              {workout.descriptionLong}
+              {this.props.workout.descriptionLong}
             </div>
         </div>
-      )
-    })
+
+    //   )
+    // }
+    // )
+
+     )
+
+  }
+
+  renderHide() {
+    return(
+      <div key={this.props.key} className="component-daily-workouts workout-main">
+        <div className="workout-mode-header">
+          <div className="mode-toggle">
+            <div className="workout-mode">
+              {this.props.workout.mode }
+            </div>
+            <div className="toggle-workout push pointer"
+                 onClick = {this.showWorkout}
+            >
+              <i className="material-icons">keyboard_arrow_down</i>
+            </div>
+          </div>
+          <div className="workout-mode-details">
+            <div className="workout-icon">
+              <Icon
+                mode={this.props.workout.mode}
+              />
+            </div>
+
+            <div className="workout-distance push">
+              <b>{this.props.workout.distance}</b>{" "}{this.props.workout.units}
+            </div>
+          </div>
+        </div>
+
+      </div>
     )
   }
+
+  render() {
+    if (this.state.show){
+      return this.renderShow()
+    } else {
+      return this.renderHide()
+    }
+  }
+
 }
 
 class Icon extends React.Component {
@@ -104,8 +163,10 @@ class Icon extends React.Component {
 
 
 DailyWorkouts.propTypes = {
-  sessions: PropTypes.object
+  sessions: PropTypes.array
+
 }
 
 export default DailyWorkouts
+
 

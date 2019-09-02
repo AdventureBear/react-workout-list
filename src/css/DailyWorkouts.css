@@ -36,6 +36,10 @@
     display: flex;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 .workout-mode-details {
     display: flex;
 }

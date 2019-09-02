@@ -11,7 +11,8 @@ class App extends React.Component {
       dailyWorkouts: dailyWorkouts,
       daysOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
       currentDate: new Date(),
-      athlete: "Kirsten Sass"
+      athlete: "Kirsten Sass",
+
     }
   }
   render() {
