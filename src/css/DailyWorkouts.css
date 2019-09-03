@@ -6,8 +6,8 @@
 
 /* Add some padding inside the card container */
 .workout-main {
-    border-right: cornflowerblue 1px solid;
-    border-bottom: cornflowerblue 1px solid;
+    border-right: gainsboro 1px solid;
+    border-bottom: gainsboro 1px solid;
     border-radius:4px;
     margin: 0px 0px;
     padding:20px;
@@ -27,7 +27,7 @@
 
 }
 .workout-mode{
-   margin:10px;
+    margin:10px;
     font-weight: bold;
     font-size: 1.1em;
 }
@@ -40,9 +40,9 @@
     cursor: pointer;
 }
 
-.workout-mode-details {
-    display: flex;
-}
+/*.workout-mode-details {*/
+/*    display: flex;*/
+/*}*/
 
 .push {
     margin-left: auto;
@@ -51,7 +51,8 @@
     margin-left: 10px;
 }
 .workout-distance {
-    margin-right: 10px     ;
+    margin:10px;
+    /*margin-right: 10px     ;*/
 }
 /*.inline-block-child {*/
 /*    display: inline-block;*/

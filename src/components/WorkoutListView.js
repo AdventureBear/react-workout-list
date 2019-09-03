@@ -33,7 +33,7 @@ class WorkoutListView extends React.Component {
             <div className="toggle-date push pointer"
                  onClick = {this.handleDateToggle}
             >
-              <i className="material-icons">keyboard_arrow_u</i>
+              <i className="material-icons">keyboard_arrow_up</i>
             </div>
           </div>
 

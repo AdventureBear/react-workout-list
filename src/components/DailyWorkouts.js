@@ -33,9 +33,18 @@ class DailyWorkouts extends React.Component {
     //   return(
         <div className="component-daily-workouts workout-main">
             <div className="workout-mode-header">
+
               <div className="mode-toggle">
+                <div className="workout-icon">
+                  <Icon
+                    mode={this.props.workout.mode}
+                  />
+                </div>
                 <div className="workout-mode">
                   {this.props.workout.mode }
+                </div>
+                <div className="workout-distance push">
+                  <b>{this.props.workout.distance}</b>{" "}{this.props.workout.units}
                 </div>
                 <div className="toggle-workout push pointer"
                      onClick = {this.showWorkout}
@@ -43,17 +52,17 @@ class DailyWorkouts extends React.Component {
                   <i className="material-icons">keyboard_arrow_up</i>
                 </div>
               </div>
-                <div className="workout-mode-details">
-                    <div className="workout-icon">
-                      <Icon
-                            mode={this.props.workout.mode}
-                      />
-                    </div>
+                {/*<div className="workout-mode-details">*/}
+                    {/*<div className="workout-icon">*/}
+                    {/*  <Icon*/}
+                    {/*        mode={this.props.workout.mode}*/}
+                    {/*  />*/}
+                    {/*</div>*/}
 
-                    <div className="workout-distance push">
-                      <b>{this.props.workout.distance}</b>{" "}{this.props.workout.units}
-                    </div>
-               </div>
+                    {/*<div className="workout-distance push">*/}
+                    {/*  <b>{this.props.workout.distance}</b>{" "}{this.props.workout.units}*/}
+                    {/*</div>*/}
+               {/*</div>*/}
             </div>
 
             <div className="workout-short">
@@ -77,27 +86,37 @@ class DailyWorkouts extends React.Component {
     return(
       <div className="component-daily-workouts workout-main">
         <div className="workout-mode-header">
+
           <div className="mode-toggle">
-            <div className="workout-mode">
-              {this.props.workout.mode }
-            </div>
-            <div className="toggle-workout push pointer"
-                 onClick = {this.showWorkout}
-            >
-              <i className="material-icons">keyboard_arrow_down</i>
-            </div>
-          </div>
-          <div className="workout-mode-details">
             <div className="workout-icon">
               <Icon
                 mode={this.props.workout.mode}
               />
             </div>
-
+            <div className="workout-mode">
+              {this.props.workout.mode }
+            </div>
             <div className="workout-distance push">
               <b>{this.props.workout.distance}</b>{" "}{this.props.workout.units}
             </div>
+            <div className="toggle-workout push pointer"
+                 onClick = {this.showWorkout}
+            >
+              <i className="material-icons">keyboard_arrow_up</i>
+            </div>
           </div>
+          {/*<div className="workout-mode-details">*/}
+          {/*<div className="workout-icon">*/}
+          {/*  <Icon*/}
+          {/*        mode={this.props.workout.mode}*/}
+          {/*  />*/}
+          {/*</div>*/}
+
+          {/*<div className="workout-distance push">*/}
+          {/*  <b>{this.props.workout.distance}</b>{" "}{this.props.workout.units}*/}
+          {/*</div>*/}
+          {/*</div>*/}
+
         </div>
 
       </div>
