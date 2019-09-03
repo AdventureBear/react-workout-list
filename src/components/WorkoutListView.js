@@ -17,17 +17,12 @@ class WorkoutListView extends React.Component {
 
   }
 
-
-
   render() {
     return (
       <div className="component-workout-list">
-          {
-            this.props.dailyData.map((dailyData,i) => {
-              return (
-                <div className="daily-card" key={i}>
+                <div className="daily-card" key={this.props.key}>
                   <div className="daily-header">
-                    <div className="date">{ moment(dailyData.date).format('ddd MMM Do')}</div>
+                    <div className="date">{ moment(this.props.dailyData.date).format('ddd MMM Do')}</div>
                     <div className="toggle-date push"
 
 
@@ -36,7 +31,7 @@ class WorkoutListView extends React.Component {
                     </div>
                   </div>
 
-                  { dailyData.sessions.map ((workout,j)=> {
+                  { this.props.dailyData.sessions.map ((workout,j)=> {
                     return(
                       <DailyWorkouts
                         key={j}
@@ -47,11 +42,6 @@ class WorkoutListView extends React.Component {
 
 
                 </div>
-              )
-            })
-          }
-
-
       </div>
     )
   }

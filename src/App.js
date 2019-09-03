@@ -24,9 +24,17 @@ class App extends React.Component {
         />
       </div>
         <div className="container">
-          <WorkoutListView
-            dailyData={this.state.dailyWorkouts}
-          />
+          <div className="component-workout-list">
+              {
+                dailyWorkouts.map((dailyData, i) => {
+                  return (
+                    <WorkoutListView
+                      dailyData={dailyData}
+                      key={i}
+                    />)
+                })
+              }
+          </div>
         </div>
         <div className="">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0"  rel="noopener noreferrer" target="_blank">CC 3.0 BY</a></div>
       </div>
