@@ -3,7 +3,6 @@
  */
 import React from 'react'
 import PropTypes from 'prop-types'; // ES6
-import ToggleDisplay from 'react-toggle-display'
 import '../css/DailyWorkouts.css'
 
 import {RunSVG, BikeSVG, SwimSVG} from "./SVGRunIcon";
@@ -32,7 +31,7 @@ class DailyWorkouts extends React.Component {
     return(
     // this.props.sessions.map ((workout,j)=> {
     //   return(
-        <div key={this.props.key} className="component-daily-workouts workout-main">
+        <div className="component-daily-workouts workout-main">
             <div className="workout-mode-header">
               <div className="mode-toggle">
                 <div className="workout-mode">
@@ -76,7 +75,7 @@ class DailyWorkouts extends React.Component {
 
   renderHide() {
     return(
-      <div key={this.props.key} className="component-daily-workouts workout-main">
+      <div className="component-daily-workouts workout-main">
         <div className="workout-mode-header">
           <div className="mode-toggle">
             <div className="workout-mode">
