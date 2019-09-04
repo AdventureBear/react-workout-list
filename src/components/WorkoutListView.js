@@ -8,7 +8,6 @@ import DailyWorkouts from './DailyWorkouts'
 
 import '../css/WorkoutListView.css'
 import moment from 'moment'
-import dailyWorkouts from '../dailyWorkouts'
 
 class WorkoutListView extends React.Component {
   constructor(props) {

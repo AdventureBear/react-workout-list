@@ -10,7 +10,7 @@ class Header extends React.Component {
   render() {
     return (
       <header className="component-header">
-        Workout List for {" "}
+        Daily Training {" "}
         <div className="athlete">
           {this.props.athlete}
         </div>
@@ -20,12 +20,6 @@ class Header extends React.Component {
   }
 }
 
-// const Header = () => <div>
-//   Workout List for
-// <span>
-//   {this.props.athlete}
-// </span>
-// </div>
 
 Header.propTypes ={
   athlete: PropTypes.string

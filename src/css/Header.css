@@ -1,4 +1,11 @@
 .component-header {
     margin: 0 auto;
-
+    width: 400px;
+    text-align: center;
+    font-size: 1.3em;
+    background-color: #357dcb;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 10px 0;
 }
