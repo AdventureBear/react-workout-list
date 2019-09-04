@@ -5,8 +5,7 @@ import React from 'react'
 import PropTypes from 'prop-types'; // ES6
 import '../css/DailyWorkouts.css'
 import Icon from './Icon'
-
-// import {RunSVG, BikeSVG, SwimSVG} from "./SVGRunIcon";
+import WorkoutHeader from './WorkoutHeader'
 
 
 class DailyWorkouts extends React.Component {
@@ -34,25 +33,13 @@ class DailyWorkouts extends React.Component {
     //   return(
         <div className="component-daily-workouts workout-main">
             <div className="workout-mode-header">
-
-              <div className="mode-toggle">
-                <div className="workout-icon">
-                  <Icon
-                    mode={this.props.workout.mode}
-                  />
-                </div>
-                <div className="workout-mode">
-                  {this.props.workout.mode }
-                </div>
-                <div className="workout-distance push">
-                  <b>{this.props.workout.distance}</b>{" "}{this.props.workout.units}
-                </div>
-                <div className="toggle-workout push pointer"
-                     onClick = {this.showWorkout}
-                       >
-                  <i className="material-icons">keyboard_arrow_up</i>
-                </div>
-              </div>
+              <WorkoutHeader
+                mode={this.props.workout.mode}
+                distance = {this.props.workout.distance}
+                units = {this.props.workout.units}
+                showWorkout = {this.showWorkout}
+                show = {this.state.show}
+              />
             </div>
 
             <div className="workout-short">
