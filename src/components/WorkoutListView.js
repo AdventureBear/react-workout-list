@@ -23,13 +23,23 @@ class WorkoutListView extends React.Component {
     })
     console.log("toggle date")
   }
+
+  handleAddClick =() => {
+    this.props.addWorkout(this.props.index)
+}
+
   renderShow() {
     return (
       <div className="component-workout-list">
         <div className="daily-card">
           <div className="daily-header">
             <div className="date">{ moment(this.props.dailyData.date).format('ddd MMM Do')}</div>
-            <div className="toggle-date push pointer"
+            <div className="add-workout push pointer"
+                 onClick={this.handleAddClick}
+            >
+              <i className="material-icons">add_box</i>
+            </div>
+            <div className="toggle-date pointer"
                  onClick = {this.handleDateToggle}
             >
               <i className="material-icons">keyboard_arrow_up</i>
@@ -55,7 +65,12 @@ class WorkoutListView extends React.Component {
         <div className="daily-card">
           <div className="daily-header">
             <div className="date">{ moment(this.props.dailyData.date).format('ddd MMM Do')}</div>
-            <div className="toggle-date push pointer"
+            <div className="add-workout push pointer"
+                 onClick={this.handleAddClick}
+            >
+              <i className="material-icons">add_box</i>
+            </div>
+            <div className="toggle-date pointer"
                  onClick = {this.handleDateToggle}
             >
               <i className="material-icons">keyboard_arrow_down</i>
@@ -78,6 +93,9 @@ class WorkoutListView extends React.Component {
 
 WorkoutListView.propTypes = {
   dailyData: PropTypes.object,
+  addWorkout: PropTypes.func,
+  editWorkout: PropTypes.func,
+  index: PropTypes.number
 }
 
 export default WorkoutListView

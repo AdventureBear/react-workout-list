@@ -37,6 +37,16 @@ class Icon extends React.Component {
     )
   }
 
+  renderNull(){
+    return (
+      <div className='workoutIcon inline-block-child'>
+        <i className="material-icons">
+          fitness_center
+        </i>
+      </div>
+    )
+  }
+
   render () {
     if (this.props.mode==="Running") {
       return this.renderRun()
@@ -44,6 +54,8 @@ class Icon extends React.Component {
       return this.renderSwim()
     } else if (this.props.mode==="Cycling"){
       return this.renderBike()
+    } else {
+      return this.renderNull()
     }
   }
 

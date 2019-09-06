@@ -1,0 +1,8 @@
+.workout-mode-edit, .workout-mode-edit input{
+    background-color: gainsboro;
+    border: none;
+}
+
+input:focus {
+    outline:none;
+}

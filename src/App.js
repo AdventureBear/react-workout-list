@@ -12,9 +12,47 @@ class App extends React.Component {
       daysOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
       currentDate: new Date(),
       athlete: "Kirsten Sass",
+      newWorkout: {
+        "mode": "New Workout",
+        "size": "24px",
+        "distance": 1,
+        "units": "mile",
+        "code": "E",
+        "codeDesc": "Endurance",
+        "descriptionShort": "Easy Endurance",
+        "descriptionLong": "When you feel sad, it’s okay. It’s not the end of the world. Everyone has those days when you doubt yourself, and when you feel like everything you do sucks, but then there’s those days when you feel like Superman. It’s just the balance of the world. I just write to feel better."
+      }
 
     }
   }
+
+  addWorkout = (i) => {
+    console.log("toggled add")
+    // const newWorkoutObj = this.state.newWorkout
+    // arr.push(newWorkoutObj)
+    // this.setState({
+    //   dailyData: arr
+    // })
+  }
+
+  saveNewWorkout = (i, newWorkout) => {
+    console.log("saving new workout")
+    var arr=this.state.dailyWorkouts[i].sessions
+    arr.push(newWorkout)
+    this.setState({
+      dailyData: arr
+    })
+  }
+
+  saveWorkout = (i) => {
+    console.log("saving edits TODO")
+
+  }
+
+  editWorkout = (i) => {
+    console.log("toggled Edit TODO")
+  }
+
   render() {
     return (
       <div>
@@ -27,10 +65,13 @@ class App extends React.Component {
           <div className="component-workout-list">
               {
                 dailyWorkouts.map((dailyData, i) => {
+                  console.log(i)
                   return (
                     <WorkoutListView
                       dailyData={dailyData}
                       key={i}
+                      index={i}
+                      addWorkout={this.addWorkout}
                     />)
                 })
               }
