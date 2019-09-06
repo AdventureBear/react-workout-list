@@ -2,15 +2,16 @@
     margin: 0 auto;
     min-height: auto;
     width: 400px;
+    display: grid;
+    grid-template-columns: 400px;
+    grid-gap: 10px;
 }
 
+
 .component-workout-list .daily-card {
-    display: flex;
-    flex-direction: column;
     margin: 20px 0;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-
 }
 
 .daily-card:hover  {
@@ -18,20 +19,30 @@
 }
 
 .component-workout-list .daily-header {
+    display: grid;
     font-weight: bold;
     font-size: 1.2em;
-    padding: 8px 16px 16px 16px;
+    padding: 16px 8px 16px 8px;
     color: #fff;
     background: cornflowerblue;
-    text-align: center;
     border-radius: 4px;
-    display: flex;
-    align-content: center;
+    grid-template-columns: 48px 48px 48px 48px 48px 48px 48px 48px;
+    vertical-align: center;
 
 }
 .date {
-text-align: center;
+    text-align: left;
+    grid-column: 1 / span 4;
 }
-.push {
-    margin-left: auto;
+
+.add-workout {
+    grid-column: 7
 }
+
+.toggle-workout {
+    grid-column: 8
+}
+
+/*.push {*/
+/*    margin-left: auto;*/
+/*}*/

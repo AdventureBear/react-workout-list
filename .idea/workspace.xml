@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f61a6489-6bc4-40ae-95c2-15223f641a91" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/css/WorkoutHeader.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/DailyWorkouts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DailyWorkouts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/WorkoutHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WorkoutHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WorkoutListView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WorkoutListView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/DailyWorkouts.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/DailyWorkouts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/WorkoutHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/WorkoutHeader.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/WorkoutListView.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/WorkoutListView.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +92,7 @@
       <workItem from="1566356485917" duration="27794000" />
       <workItem from="1566955855939" duration="12767000" />
       <workItem from="1567304981575" duration="21273000" />
-      <workItem from="1567535274586" duration="11904000" />
+      <workItem from="1567535274586" duration="15433000" />
     </task>
     <servers />
   </component>

@@ -73,7 +73,7 @@ class WorkoutHeader extends React.Component {
             mode={this.props.mode}
           />
         </div>
-        <div className="workout-mode-edit">
+        <div className="workout-mode workout-mode-edit">
           <input ref="mode" className="workout-mode-input" type="text"
                  defaultValue={this.props.mode}
                  onChange={this.props.handleModeChange} />
@@ -90,7 +90,7 @@ class WorkoutHeader extends React.Component {
         </div>
 
         <div className="toggle-workout pointer md-inactive"
-             // onClick={this.props.showWorkout}
+             onClick={this.props.showWorkout}
         >
           <i className="material-icons">keyboard_arrow_down</i>
         </div>

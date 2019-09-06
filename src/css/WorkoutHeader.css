@@ -1,8 +1,43 @@
-.workout-mode-edit, .workout-mode-edit input{
-    background-color: gainsboro;
-    border: none;
+.mode-toggle {
+    display: grid;
+    grid-template-columns: 45px 45px 45px 45px 45px 45px 45px 45px;
+    vertical-align: center;
+    height: 40px;
 }
 
-input:focus {
-    outline:none;
+.workout-mode-edit input{
+    background-color: #ededed;
+    border: none;
+    padding: 0px;
+    width: 120px;
+}
+
+/*input:focus {*/
+/*    outline:none;*/
+/*}*/
+
+.workout-icon {
+    grid-column: 1;
+}
+
+.workout-mode {
+    padding: 1px;
+    grid-colum: 2 / span 4;
+    font-weight: bold;
+}
+
+/*.distance {*/
+/*    font-size: 1.2em;*/
+/*}*/
+.workout-distance {
+    grid-column: 5 / span 2;
+
+}
+
+.edit {
+    grid-column: 7;
+}
+
+.toggle-workout {
+    grid-column: 8;
 }

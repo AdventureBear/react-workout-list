@@ -108,7 +108,7 @@ class DailyWorkouts extends React.Component {
         </div>
 
         <div className="workout-short">
-          {/*<strong>{this.props.workout.code}: </strong>{this.props.codeDesc}*/}
+          <strong>{this.props.workout.code}: </strong>{this.props.codeDesc}
           {this.props.workout.descriptionShort}
         </div>
         <div className="workout-long">
