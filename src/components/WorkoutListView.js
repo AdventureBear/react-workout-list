@@ -33,7 +33,7 @@ class WorkoutListView extends React.Component {
       <div className="component-workout-list">
         <div className="daily-card">
           <div className="daily-header">
-            <div className="date">{ moment(this.props.dailyData.date).format('ddd MMM Do')}</div>
+            <div className="date">{ moment(this.props.date).format('ddd MMM Do')}</div>
             <div className="add-workout push pointer"
                  onClick={this.handleAddClick}
             >
@@ -46,11 +46,12 @@ class WorkoutListView extends React.Component {
             </div>
           </div>
 
-          { this.props.dailyData.sessions.map ((workout,j)=> {
+          { this.props.sessions.map ((workout,j)=> {
             return(
               <DailyWorkouts
                 key={j}
-                workout={workout}
+                {...workout}
+                handleModeChange={this.props.handleModeChange}
               />
             )
           })}
@@ -64,7 +65,7 @@ class WorkoutListView extends React.Component {
       <div className="component-workout-list">
         <div className="daily-card">
           <div className="daily-header">
-            <div className="date">{ moment(this.props.dailyData.date).format('ddd MMM Do')}</div>
+            <div className="date">{ moment(this.props.date).format('ddd MMM Do')}</div>
             <div className="add-workout push pointer"
                  onClick={this.handleAddClick}
             >

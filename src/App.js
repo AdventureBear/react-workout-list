@@ -49,6 +49,11 @@ class App extends React.Component {
 
   }
 
+  handleModeChange = (e, refs) => {
+    console.log("saving mode change TODO" + e.target.value + refs)
+
+  }
+
   editWorkout = (i) => {
     console.log("toggled Edit TODO")
   }
@@ -68,10 +73,11 @@ class App extends React.Component {
                   console.log(i)
                   return (
                     <WorkoutListView
-                      dailyData={dailyData}
+                      {...dailyData}
                       key={i}
                       index={i}
                       addWorkout={this.addWorkout}
+                      handleModeChange={this.handleModeChange}
                     />)
                 })
               }

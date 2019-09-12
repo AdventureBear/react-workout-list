@@ -4,6 +4,32 @@ import PropTypes from 'prop-types'
 import '../css/WorkoutHeader.css'
 
 class WorkoutHeader extends React.Component {
+
+  constructor(props) {
+    super(props)
+
+
+    // this.handleSaveClick = this.handleSaveClick.bind(this);
+  }
+
+  //
+  //
+  // handleSaveClick = ()=>  {
+  //   console.log(this.props.mode)
+  //
+  //   // console.log(this.ref)
+  // }
+
+  // saveButtonClick = () => {
+  //   console.log('Save Button Clicked, ' + this.state.instructions)
+  //   let newInstr = this.state.instructions
+  //   let newTitle = this.refs.title.value
+  //   this.setState({
+  //     isEditing: false
+  //   })
+  //   this.props.saveRecipe(newInstr, newTitle, this.props.index)
+  // }
+
   renderShow() {
     return(
     <div className="mode-toggle">
@@ -18,7 +44,7 @@ class WorkoutHeader extends React.Component {
       <div className="workout-distance">
         <b>{this.props.distance}</b>{" "}{this.props.units}
       </div>
-      <div className="edit push pointer"
+      <div className="edit  pointer"
            onClick={this.props.handleEditClick}>
         <i className="material-icons md-dark">
           edit
@@ -81,11 +107,11 @@ class WorkoutHeader extends React.Component {
         <div className="workout-distance">
           <b>{this.props.distance}</b>{" "}{this.props.units}
         </div>
-        <div className="save push"
-          onClick={this.props.handleSaveClick}
+        <div className="save pointer"
+          onClick={this.props.saveEdits}
         >
           <i className="material-icons md-dark md-24">
-            edit
+            save
           </i>
         </div>
 
@@ -118,7 +144,7 @@ WorkoutHeader.propTypes = {
   units: PropTypes.string,
   showWorkout: PropTypes.func,
   addWorkout: PropTypes.func,
-  handleSaveClick: PropTypes.func,
+  saveEdits: PropTypes.func,
   // editWorkout: PropTypes.func,
   handleEditClick: PropTypes.func,
   handleModeChange: PropTypes.func,

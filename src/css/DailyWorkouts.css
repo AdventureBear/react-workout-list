@@ -20,13 +20,6 @@
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-/*.workout-mode-header {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-
-
-/*}*/
-
 
 .mode-toggle {
     display: flex;
@@ -36,23 +29,6 @@
     cursor: pointer;
 }
 
-/*.workout-mode-details {*/
-/*    display: flex;*/
-/*}*/
-
-/*.push {*/
-/*    margin-left: auto;*/
-/*}*/
-/*.workout-icon {*/
-/*    margin-left: 10px;*/
-/*}*/
-/*.workout-distance {*/
-/*    margin:10px;*/
-/*    !*margin-right: 10px     ;*!*/
-/*}*/
-/*.inline-block-child {*/
-/*    display: inline-block;*/
-/*}*/
 
 .workout-short, .workout-long {
     margin: 10px 0 5px 5px;

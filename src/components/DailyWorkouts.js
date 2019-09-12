@@ -36,7 +36,8 @@ class DailyWorkouts extends React.Component {
     console.log("toggled edit")
   }
 
-  handleSaveClick = () => {
+  saveEdits = () => {
+    console.log("Save button clicked")
     this.setState({
       edit: false,
       show: true
@@ -44,30 +45,32 @@ class DailyWorkouts extends React.Component {
 
   }
 
-  handleModeChange = () => {
-    console.log("saving mode change TODO")
-  }
+  // handleModeChange = (e) => {
+  //   console.log("saving mode change TODO" + e.target.value)
+  //
+  // }
 
   renderShow () {
     return(
         <div className="component-daily-workouts workout-main">
             <div className="workout-mode-header">
               <WorkoutHeader
-                mode={this.props.workout.mode}
-                distance = {this.props.workout.distance}
-                units = {this.props.workout.units}
+                mode={this.props.mode}
+                distance = {this.props.distance}
+                units = {this.props.units}
                 showWorkout = {this.showWorkout}
                 handleEditClick={this.handleEditClick}
                 show = {this.state.show}
+                saveEdits={this.saveEdits}
               />
             </div>
 
             <div className="workout-short">
-              <strong>{this.props.workout.code}: </strong>{this.props.codeDesc}
-                {this.props.workout.descriptionShort}
+              <strong>{this.props.code}: </strong>{this.props.codeDesc}
+                {this.props.descriptionShort}
             </div>
             <div className="workout-long">
-              {this.props.workout.descriptionLong}
+              {this.props.descriptionLong}
             </div>
         </div>
      )
@@ -101,8 +104,8 @@ class DailyWorkouts extends React.Component {
             units = {this.props.workout.units}
             showWorkout = {this.showWorkout}
             handleEditClick={this.handleEditClick}
-            handleSaveClick={this.handleSaveClick}
-            handleModeChange={this.handleModeChange}
+            saveEdits={this.saveEdits}
+            handleModeChange={this.props.handleModeChange}
             show = {this.state.show}
           />
         </div>
