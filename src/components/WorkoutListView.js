@@ -9,6 +9,8 @@ import DailyWorkouts from './DailyWorkouts'
 import '../css/WorkoutListView.css'
 import moment from 'moment'
 
+import { WorkoutContext } from '../context/WorkoutContext.js'
+
 class WorkoutListView extends React.Component {
   constructor(props) {
     super(props)
@@ -29,11 +31,25 @@ class WorkoutListView extends React.Component {
 }
 
   renderShow() {
+    const workouts =  this.props.sessions.map ((workout,j)=> {
+        return(
+          <DailyWorkouts
+            key={j}
+            dayIndex={this.props.index}
+            sessionIndex={j}
+            {...workout}
+            saveWorkoutHeaderChanges={this.props.saveWorkoutHeaderChanges}
+          />
+        )
+      })
+
     return (
+
       <div className="component-workout-list">
+        {console.log(this.context)}
         <div className="daily-card">
           <div className="daily-header">
-            <div className="date">{ moment(this.props.date).format('ddd MMM Do')}</div>
+            <div className="date">{ moment(this.props.date, 'MM DD YYYY').format('ddd MMM Do')}</div>
             <div className="add-workout push pointer"
                  onClick={this.handleAddClick}
             >
@@ -45,16 +61,7 @@ class WorkoutListView extends React.Component {
               <i className="material-icons">keyboard_arrow_up</i>
             </div>
           </div>
-
-          { this.props.sessions.map ((workout,j)=> {
-            return(
-              <DailyWorkouts
-                key={j}
-                {...workout}
-                handleModeChange={this.props.handleModeChange}
-              />
-            )
-          })}
+          {workouts}
         </div>
       </div>
     )
@@ -65,7 +72,7 @@ class WorkoutListView extends React.Component {
       <div className="component-workout-list">
         <div className="daily-card">
           <div className="daily-header">
-            <div className="date">{ moment(this.props.date).format('ddd MMM Do')}</div>
+            <div className="date">{ moment(this.props.date, 'MM DD YYYY').format('ddd MMM Do')}</div>
             <div className="add-workout push pointer"
                  onClick={this.handleAddClick}
             >
@@ -96,7 +103,9 @@ WorkoutListView.propTypes = {
   dailyData: PropTypes.object,
   addWorkout: PropTypes.func,
   editWorkout: PropTypes.func,
-  index: PropTypes.number
+  index: PropTypes.number,
+  saveWorkoutHeaderChanges: PropTypes.func
 }
 
+WorkoutListView.contextType = WorkoutContext
 export default WorkoutListView

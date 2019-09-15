@@ -20,15 +20,9 @@
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-
-.mode-toggle {
-    display: flex;
-}
-
 .pointer {
     cursor: pointer;
 }
-
 
 .workout-short, .workout-long {
     margin: 10px 0 5px 5px;

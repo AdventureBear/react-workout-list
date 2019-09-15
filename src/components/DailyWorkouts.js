@@ -36,21 +36,18 @@ class DailyWorkouts extends React.Component {
     console.log("toggled edit")
   }
 
-  saveEdits = () => {
-    console.log("Save button clicked")
+  saveEdits = (updateObj, ) => {
+    console.log("This was passed: " + Object.keys(updateObj))
+    // console.log(e.target.value)
     this.setState({
       edit: false,
       show: true
     })
-
+    this.props.saveWorkoutHeaderChanges(updateObj, this.props.dayIndex, this.props.sessionIndex)
   }
 
-  // handleModeChange = (e) => {
-  //   console.log("saving mode change TODO" + e.target.value)
-  //
-  // }
-
   renderShow () {
+
     return(
         <div className="component-daily-workouts workout-main">
             <div className="workout-mode-header">
@@ -81,9 +78,9 @@ class DailyWorkouts extends React.Component {
       <div className="component-daily-workouts workout-main">
         <div className="workout-mode-header">
           <WorkoutHeader
-            mode={this.props.workout.mode}
-            distance = {this.props.workout.distance}
-            units = {this.props.workout.units}
+            mode={this.props.mode}
+            distance = {this.props.distance}
+            units = {this.props.units}
             showWorkout = {this.showWorkout}
             // handleEditClick={this.handleEditClick}
             show = {this.state.show}
@@ -99,9 +96,9 @@ class DailyWorkouts extends React.Component {
         <div className="workout-mode-header">
           <WorkoutHeader
             edit={this.state.edit}
-            mode={this.props.workout.mode}
-            distance = {this.props.workout.distance}
-            units = {this.props.workout.units}
+            mode={this.props.mode}
+            distance = {this.props.distance}
+            units = {this.props.units}
             showWorkout = {this.showWorkout}
             handleEditClick={this.handleEditClick}
             saveEdits={this.saveEdits}
@@ -110,13 +107,19 @@ class DailyWorkouts extends React.Component {
           />
         </div>
 
-        <div className="workout-short">
-          <strong>{this.props.workout.code}: </strong>{this.props.codeDesc}
-          {this.props.workout.descriptionShort}
-        </div>
-        <div className="workout-long">
-          {this.props.workout.descriptionLong}
-        </div>
+        <ShortWorkouts
+          {...this.props}
+        />
+        <LongWorkouts
+          {...this.props}
+        />
+        {/*<div className="workout-short">*/}
+        {/*  <strong>{this.props.code}: </strong>{this.props.codeDesc}*/}
+        {/*  {this.props.descriptionShort}*/}
+        {/*</div>*/}
+        {/*<div className="workout-long">*/}
+        {/*  {this.props.descriptionLong}*/}
+        {/*</div>*/}
       </div>
     )
   }
@@ -135,10 +138,22 @@ class DailyWorkouts extends React.Component {
 
 }
 
+const ShortWorkouts = props => (
+  <div className="workout-short">
+    <strong>{props.code}: </strong>{props.codeDesc}
+    {props.descriptionShort}
+  </div>
+)
 
+const LongWorkouts = props => (
+  <div className="workout-long">
+    {props.descriptionLong}
+  </div>
+)
 DailyWorkouts.propTypes = {
   sessions: PropTypes.array,
-  editWorkout: PropTypes.func
+  editWorkout: PropTypes.func,
+  saveWorkoutHeaderChanges: PropTypes.func
 }
 
 export default DailyWorkouts

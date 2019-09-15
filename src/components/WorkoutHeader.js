@@ -3,32 +3,18 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import '../css/WorkoutHeader.css'
 
+
 class WorkoutHeader extends React.Component {
+  handleSaveClick = (e) => {
+    let modeObj = {
+      "mode": this.refs.mode.value,
+      "distance": this.refs.distance.value,
+      "units": this.refs.units.value
+    }
 
-  constructor(props) {
-    super(props)
-
-
-    // this.handleSaveClick = this.handleSaveClick.bind(this);
+    console.log(modeObj)
+    this.props.saveEdits(modeObj)
   }
-
-  //
-  //
-  // handleSaveClick = ()=>  {
-  //   console.log(this.props.mode)
-  //
-  //   // console.log(this.ref)
-  // }
-
-  // saveButtonClick = () => {
-  //   console.log('Save Button Clicked, ' + this.state.instructions)
-  //   let newInstr = this.state.instructions
-  //   let newTitle = this.refs.title.value
-  //   this.setState({
-  //     isEditing: false
-  //   })
-  //   this.props.saveRecipe(newInstr, newTitle, this.props.index)
-  // }
 
   renderShow() {
     return(
@@ -87,7 +73,6 @@ class WorkoutHeader extends React.Component {
           <i className="material-icons">keyboard_arrow_down</i>
         </div>
       </div>
-
     )
   }
 
@@ -99,16 +84,30 @@ class WorkoutHeader extends React.Component {
             mode={this.props.mode}
           />
         </div>
+
         <div className="workout-mode workout-mode-edit">
           <input ref="mode" className="workout-mode-input" type="text"
                  defaultValue={this.props.mode}
                  onChange={this.props.handleModeChange} />
         </div>
-        <div className="workout-distance">
-          <b>{this.props.distance}</b>{" "}{this.props.units}
+
+        <div className="workout-distance workout-distance-edit">
+          <b><input ref="distance"  type="number"
+                 defaultValue={this.props.distance}
+                 onChange={this.props.handleModeChange} /></b>
+                 {" "}
+          <select className ="units-select" ref="units"  type="text"
+                 defaultValue={this.props.units}
+                  onChange={this.props.handleModeChange} >
+            <option value="miles">Miles</option>
+            <option value="kilos">Kilos</option>
+            <option value="meters">Meters</option>
+            <option value="yards">Yards</option>
+          </select>
         </div>
+
         <div className="save pointer"
-          onClick={this.props.saveEdits}
+          onClick={this.handleSaveClick}
         >
           <i className="material-icons md-dark md-24">
             save
@@ -148,7 +147,8 @@ WorkoutHeader.propTypes = {
   // editWorkout: PropTypes.func,
   handleEditClick: PropTypes.func,
   handleModeChange: PropTypes.func,
-  mode: PropTypes.string
+  mode: PropTypes.string,
+  saveWorkoutHeaderChanges: PropTypes.func
 }
 
 export default WorkoutHeader

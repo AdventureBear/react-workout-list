@@ -1,15 +1,25 @@
-.mode-toggle {
+.mode-toggle, mode-toggle-edit {
     display: grid;
     grid-template-columns: 45px 45px 45px 45px 45px 45px 45px 45px;
-    vertical-align: center;
+    /*vertical-align: center;*/
     height: 40px;
 }
 
-.workout-mode-edit input{
+.workout-mode-edit input, .workout-distance-edit input{
     background-color: #ededed;
     border: none;
     padding: 0px;
+    /*width: 120px;*/
+}
+
+.workout-mode-edit input{
     width: 120px;
+
+}
+
+.workout-distance-edit input {
+    width: 20px;
+
 }
 
 /*input:focus {*/
@@ -26,12 +36,8 @@
     font-weight: bold;
 }
 
-/*.distance {*/
-/*    font-size: 1.2em;*/
-/*}*/
 .workout-distance {
     grid-column: 5 / span 2;
-
 }
 
 .edit {
@@ -40,4 +46,8 @@
 
 .toggle-workout {
     grid-column: 8;
+}
+
+.units-select {
+    font-size: small;
 }

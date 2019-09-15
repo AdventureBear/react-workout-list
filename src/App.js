@@ -3,14 +3,15 @@ import WorkoutListView from './components/WorkoutListView'
 import Header from './components/Header'
 import './css/App.css'
 import dailyWorkouts from './dailyWorkouts'
+import moment from 'moment'
+import { WorkoutContext } from './context/WorkoutContext.js'
 
 class App extends React.Component {
   constructor(props) {
     super(props)
     this.state={
       dailyWorkouts: dailyWorkouts,
-      daysOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      currentDate: new Date(),
+      currentDate: moment(new Date()),
       athlete: "Kirsten Sass",
       newWorkout: {
         "mode": "New Workout",
@@ -49,8 +50,25 @@ class App extends React.Component {
 
   }
 
-  handleModeChange = (e, refs) => {
-    console.log("saving mode change TODO" + e.target.value + refs)
+  saveWorkoutHeaderChanges = (updateObj, dayIndex, sessionIndex) => {
+    console.log("saving mode change TODO " + updateObj )
+    let arrKeys = Object.keys(updateObj)
+    let session = this.state.dailyWorkouts[dayIndex].sessions[sessionIndex]
+   arrKeys.map((elem) => {
+        if (elem in session) {
+            session[elem] = updateObj[elem]
+          }
+        }
+     )
+
+    let arr = this.state.dailyWorkouts
+
+    arr[dayIndex].sessions[sessionIndex] = session
+
+    this.setState({
+      dailyWorkouts: arr
+    })
+    console.log(session)
 
   }
 
@@ -60,17 +78,18 @@ class App extends React.Component {
 
   render() {
     return (
+       <WorkoutContext.Provider
+        value = {this.state}
+       >
       <div>
-      <div>
-        <Header
-          athlete={this.state.athlete}
-        />
-      </div>
+        <div>
+          <Header
+            athlete={this.state.athlete}
+          />
+        </div>
         <div className="container">
           <div className="component-workout-list">
-              {
-                dailyWorkouts.map((dailyData, i) => {
-                  console.log(i)
+              {this.state.dailyWorkouts.map((dailyData, i) => {
                   return (
                     <WorkoutListView
                       {...dailyData}
@@ -78,6 +97,7 @@ class App extends React.Component {
                       index={i}
                       addWorkout={this.addWorkout}
                       handleModeChange={this.handleModeChange}
+                      saveWorkoutHeaderChanges = {this.saveWorkoutHeaderChanges}
                     />)
                 })
               }
@@ -85,8 +105,13 @@ class App extends React.Component {
         </div>
         <div className="">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0"  rel="noopener noreferrer" target="_blank">CC 3.0 BY</a></div>
       </div>
+       </WorkoutContext.Provider>
+
+
+
     )
   }
 }
+
 
 export default App
